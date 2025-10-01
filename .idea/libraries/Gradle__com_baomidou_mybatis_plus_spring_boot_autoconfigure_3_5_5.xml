@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.baomidou:mybatis-plus-spring-boot-autoconfigure:3.5.5">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.5/bf546ffba38cb2226f38885ab8df798cadca8061/mybatis-plus-spring-boot-autoconfigure-3.5.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.baomidou/mybatis-plus-spring-boot-autoconfigure/3.5.5/1259cbb55840f66f683d570c1ba6e4c9a3efcfc1/mybatis-plus-spring-boot-autoconfigure-3.5.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

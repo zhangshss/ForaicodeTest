@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>API 文档 - 花艺项目管理系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .method-get { color: green; }
+        .method-post { color: blue; }
+        .method-delete { color: red; }
+        .method-put, .method-patch { color: orange; }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h2>RESTful API 文档</h2>
+    <p class="text-muted">当前系统所有可访问接口列表（自动扫描）</p>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+        <tr>
+            <th>HTTP 方法</th>
+            <th>路径</th>
+            <th>说明</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="api : ${endpoints}">
+            <td>
+                <span th:class="'badge ' + 
+                    (${api.method == 'GET'} ? 'bg-success' : 
+                     ${api.method == 'POST'} ? 'bg-primary' : 
+                     ${api.method == 'DELETE'} ? 'bg-danger' : 'bg-warning')"
+                      th:text="${api.method}"></span>
+            </td>
+            <td><code th:text="${api.path}"></code></td>
+            <td th:text="${api.description}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="/" class="btn btn-outline-secondary mt-3">返回主页</a>
+</div>
+</body>
+</html>

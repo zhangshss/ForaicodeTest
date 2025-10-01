@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${project.id} ? '编辑项目' : '新增项目'">项目表单</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2 th:text="${project.id} ? '编辑项目' : '新增项目'"></h2>
+    <form th:object="${project}" th:action="${project.id} ? @{/projects/{id}(id=${project.id})} : @{/projects}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <div class="mb-3">
+            <label class="form-label">名称</label>
+            <input type="text" class="form-control" th:field="*{name}" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">描述</label>
+            <textarea class="form-control" th:field="*{description}"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">状态</label>
+            <input type="text" class="form-control" th:field="*{status}" placeholder="如: ACTIVE" />
+        </div>
+        <button type="submit" class="btn btn-primary">保存</button>
+        <a href="/projects" class="btn btn-secondary">取消</a>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.baomidou:mybatis-plus-boot-starter:3.5.5">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.baomidou/mybatis-plus-boot-starter/3.5.5/54bbfbc65c57978b940978a40e45fa090f8b2936/mybatis-plus-boot-starter-3.5.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/com.baomidou/mybatis-plus-boot-starter/3.5.5/94a508e826f66e2ecfbfbd4b01b5f360bbbd2fce/mybatis-plus-boot-starter-3.5.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mybatis:mybatis:3.5.15">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.15/b20603c8e94757b5265ed02f043817db7c344c32/mybatis-3.5.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.15/401ecdcd12b6c7efa2fb9e491f87a10cb291d21a/mybatis-3.5.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

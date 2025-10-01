@@ -1,0 +1,30 @@
+# mysql-init/docker-compose.yml
+version: '3.8'
+
+services:
+  mysql-pms:
+    image: mysql:8.0
+    container_name: mysql-pms
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      # 可选：创建默认数据库（但我们会用 init.sql，所以非必需）
+    volumes:
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf:ro
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - mysql_data:/var/lib/mysql  # 持久化数据（可选）
+    networks:
+      net-star:
+        ipv4_address: 172.20.0.2
+    ports:
+      - "3306:3306"
+    command: --lower_case_table_names=1 --default-authentication-plugin=mysql_native_password
+    restart: "no"
+volumes:
+  mysql_data:
+
+networks:
+  net-star:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
